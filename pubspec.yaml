@@ -12,7 +12,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   http: ^1.2.0
-  geolocator: ^9.0.2  # Aquí agregada correctamente junto a las demás[cite: 3, 22]
+  geolocator: ^9.0.2  
+  image_picker: ^1.2.4
 
 dev_dependencies:
   flutter_test:

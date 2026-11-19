@@ -5,6 +5,8 @@ import 'post_detail_screen.dart';
 import 'post_form_screen.dart';
 import 'attendance_screen.dart';
 
+import 'foto_screen.dart';
+
 class PostsScreen extends StatefulWidget {
   final String baseUrl;
   const PostsScreen({super.key, required this.baseUrl});
@@ -110,8 +112,23 @@ class _PostsScreenState extends State<PostsScreen> {
           },
         ),
         const SizedBox(width: 8),
+        // para fotos (Práctica 10)
+        IconButton(
+          tooltip: 'Subir Foto',
+          icon: const Icon(Icons.add_a_photo_outlined),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => FotoScreen(baseUrl: widget.baseUrl),
+              ),
+            );
+          },
+        ),
+        const SizedBox(width: 8),
       ],
     ),
+    
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
           : _posts.isEmpty
